@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="java.sql.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,65 +13,65 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 body
 {
-	margin:0;
-	padding:0;
-	font-family: sans-serif;
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
 }
 nav
 {
-	position: fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:100px;
-	padding: 10px 100px;
-	box-sizing: border-box;
-	transition: .5%;
-	
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5%;
+    
 }
 
 nav .logo img
 {
-	margin-left: -60px;
-	height: 100px;
-	transition: .5%;
-	
+    margin-left: -60px;
+    height: 100px;
+    transition: .5%;
+    
 }
 
 nav ul
 {
-	
-	float:right;
-	margin: 0;
-	padding:0;
-	display:flex;
-	
+    
+    float:right;
+    margin: 0;
+    padding:0;
+    display:flex;
+    
 }
 
 nav ul li
 {
-	list-style:none;
-	margin: 10px;
+    list-style:none;
+    margin: 10px;
 }
 nav ul li a
 {
-	line-height: 80px;
-	color: #fff;
-	padding: 5px 20px;
-	background-color: rgba(0,0,0,0.4);
-	font-family: 'Roboto', sans-serif;
-	text-decoration:none;
-	text-transform: uppercase;
-	transition: .5%;
-	border:none;
-	border-color: none;
-	border-radius: 4px;
+    line-height: 80px;
+    color: #fff;
+    padding: 5px 20px;
+    background-color: rgba(0,0,0,0.4);
+    font-family: 'Roboto', sans-serif;
+    text-decoration:none;
+    text-transform: uppercase;
+    transition: .5%;
+    border:none;
+    border-color: none;
+    border-radius: 4px;
 }
 nav ul li a:hover
 {
-	color: #000;
-	background: white;
-	
+    color: #000;
+    background: white;
+    
 }
 *{
     margin: 0;
@@ -88,7 +88,7 @@ nav ul li a:hover
 .team-section h1{
   width: 500px;
   margin: 20px 100px;
- 	border-radius: 10px;
+     border-radius: 10px;
     text-transform: uppercase;
     margin-bottom: 40px;
     color: black;
@@ -113,7 +113,7 @@ nav ul li a:hover
     overflow: hidden;
     border-radius:20%;
     transition: 0.4s all;
- 	background-color: rgba(0,0,0,0.4);
+     background-color: rgba(0,0,0,0.4);
     text-transform: uppercase;
      width: 200px;
      padding-top:30px;
@@ -131,7 +131,7 @@ nav ul li a:hover
    
 filter: grayscale(100%);
 }
-.section{	
+.section{    
     width: 600px;
     margin: auto;
     font-size: 20px;
@@ -158,12 +158,11 @@ filter: grayscale(100%);
 <div class="logo">
 <a href="Nav.jsp"><img src="./img/logo2.png"></a>
 <ul>
-<li>  <a href="Nav.jsp">Home</a></li>
-  <li><a href="#band" >Your Appointments</a></li>
+<li>  <a href="Navdoctor.jsp">Home</a></li>  
   <li><a href="about.jsp">About Us</a></li>
  <li><a href="Doctorlogout" >Logout</a></li>
  </ul>
- <b><a href="#dsf"><% HttpSession sessio=request.getSession(false);  
+ <b><a href="Navdoctor.jsp"><% HttpSession sessio=request.getSession(false);  
  if(sessio!=null){  
  String name=(String)sessio.getAttribute("userid");  
  out.print(name);}
@@ -173,9 +172,11 @@ filter: grayscale(100%);
             <h1>
               View your Appointments
             </h1>
+            
             <span class="border"></span>
             <div class="ps">               
-               <a href="#p1" >Schedules</a>
+               <a href="Schedules.jsp" >Schedules</a>
+               <a href="credits.jsp" >Your Credits</a>
                             
                
             </div>
@@ -194,7 +195,7 @@ filter: grayscale(100%);
 
  </section>
 
-<footer class="w3-container w3-padding-16 w3-center w3-black w3-xlarge">
+<footer class="w3-container w3-padding-16 w3-center w3-dark-gray w3-xlarge">
   <a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i></a>
   <a href="https://www.pinterest.com"><i class="fa fa-pinterest-p"></i></a>
   <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
@@ -224,3 +225,4 @@ function carousel() {
 
 </body>
 </html>
+

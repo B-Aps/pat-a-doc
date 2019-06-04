@@ -219,7 +219,7 @@ margin-top: 500px:
 <a href="Nav.jsp"><img src="./img/logo2.png"></a>
 <ul>
 <li>  <a href="Nav.jsp">Home</a></li>
-  <li><a href="#band" >Your Appointments</a></li>
+  <li><a href="Appointments.jsp" >Your Appointments</a></li>
   <li><a href="about.jsp">About Us</a></li>
  <li><a href="Logoutserv" >Logout</a></li>
  </ul>

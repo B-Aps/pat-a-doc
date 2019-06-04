@@ -54,7 +54,7 @@ public class Doctorchangeserv extends HttpServlet {
 	        	DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 	            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
 	            Statement stmt = con.createStatement();
-	            ResultSet rs =stmt.executeQuery("select * from bhaskar.Doctdet where userid='"+userid+"' and password='"+cpass+"' ");	
+	            ResultSet rs =stmt.executeQuery("select * from sathya.doctdet where userid='"+userid+"' and password='"+cpass+"' ");	
 	        
 	        if(password1.contentEquals(password))
 	        {
@@ -62,7 +62,7 @@ public class Doctorchangeserv extends HttpServlet {
 	            
 	            DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 	            Connection con1=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
-	            String sql="update bhaskar.doctdet set password='"+password1+"' where userid='"+userid+"' ";
+	            String sql="update sathya.doctdet set password='"+password1+"' where userid='"+userid+"' ";
 	            PreparedStatement stat=con1.prepareStatement(sql);
 	            stat.executeUpdate();
 	            request.getRequestDispatcher("Doctorsignin.jsp").include(request,response);
@@ -85,6 +85,12 @@ public class Doctorchangeserv extends HttpServlet {
 	    }
 
 	}
+
+
+	
+
+
+
 
 	
 

@@ -39,9 +39,16 @@ public class Payinserv extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		 PrintWriter out=response.getWriter();
-	        int n=Integer.parseInt(request.getParameter("hidays"));
-	        int tot=1000*n;
-	        out.println(tot);
+	        //int n=Integer.parseInt(request.getParameter("hidays"));
+	       // int tot=1000*n;
+	       // out.println(tot);
+	        out.println("<html><body>");
+	        out.println("<script type=\"text/javascript\">");
+	        out.println("alert('Your Appointment Booked Sucessfully view details in your Appointment');");
+	        out.println("</script>");
+	        out.println("</body></html>"); 
+	        request.getRequestDispatcher("Nav.jsp").include(request,response);        
+
 	        
 	}
 

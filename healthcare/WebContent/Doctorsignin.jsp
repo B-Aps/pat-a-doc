@@ -145,7 +145,7 @@ margin-top:-15px;
       
       </div>
      Not registered? <a href="Doctorreg.jsp"><font size="3" color="white" face="comic sans ms"> Sign Up!</font></a></p>
-      <a href="#dee"><font size="3" color="white" face="comic sans ms"> Forgot password?</font></a></p>
+      <a href="Forgotpassword"><font size="3" color="white" face="comic sans ms"> Forgot password?</font></a></p>
  </div>
  </div>
  

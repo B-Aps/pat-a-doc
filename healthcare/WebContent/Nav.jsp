@@ -156,11 +156,11 @@ filter: grayscale(100%);
 <a href="contact.jsp"><img src="./img/logo2.png"></a>
 <ul>
 <li>  <a href="Nav.jsp">Home</a></li>
-  <li><a href="#band" >Your Appointments</a></li>
+  <li><a href="Appointments.jsp" >Your Appointments</a></li>
   <li><a href="about.jsp">About Us</a></li>
  <li><a href="Logoutserv" >Logout</a></li>
  </ul>
- <b><a href="#dsf"><% HttpSession sessio=request.getSession(false);  
+ <b><a href="dfs"><% HttpSession sessio=request.getSession(false);  
  if(sessio!=null){  
  String name=(String)sessio.getAttribute("userid");  
  out.print(name);}

@@ -58,7 +58,7 @@ public class Doctorloginserv extends HttpServlet {
         Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
         Statement stmt = con.createStatement();
 
-        ResultSet rs =stmt.executeQuery("select * from bhaskar.doctdet where userid='"+userid+"' and password='"+password+"' ");
+        ResultSet rs =stmt.executeQuery("select * from sathya.doctdet where doctid='"+userid+"' and pass='"+password+"' ");
         //request.getRequestDispatcher("Nav.jsp").include(request,response);
         HttpSession session=request.getSession();  
         session.setAttribute("userid",userid);  
@@ -93,8 +93,7 @@ public class Doctorloginserv extends HttpServlet {
 
         }
     }
+}
 
-
-	}
 
 

@@ -119,7 +119,7 @@ button:hover {
 .logo img
 {
 margin-top:-15px;
-	margin-left: 127px;
+	margin-left: 175px;
 	height: 138px;
 	transition: .5%;
 	
@@ -144,7 +144,7 @@ margin-top:-15px;
       
       </div>
      Not registered? <a href="Register.jsp"><font size="3" color="gray" face="comic sans ms"> Sign Up!</font></a></p>
-      <a href="#dee"><font size="3" color="gray" face="comic sans ms"> Forgot password?</font></a></p>
+      <a href="Forgotpassword.jsp"><font size="3" color="gray" face="comic sans ms"> Forgot password?</font></a></p>
  </div>
  </div>
    </div>
